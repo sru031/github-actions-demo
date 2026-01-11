@@ -1,0 +1,23 @@
+name: Jobs and Execution Order Demo
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build step
+        run: echo "Building application"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test step
+        run: echo "Running tests"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy step
+        run: echo "Deploying application"
