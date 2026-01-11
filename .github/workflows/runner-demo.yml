@@ -1,0 +1,28 @@
+
+name: Runner Exploration
+
+on:
+  push:
+
+jobs:
+  explore-runner:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show OS details
+        run: uname -a
+
+      - name: Show current user
+        run: whoami
+
+      - name: Show working directory
+        run: pwd
+
+      - name: List files
+        run: ls -la
+
+      - name: Create a file
+        run: echo "Hello from runner" > demo.txt
+
+      - name: Verify file exists
+        run: cat demo.txt
