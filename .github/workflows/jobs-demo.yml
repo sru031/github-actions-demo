@@ -14,10 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test step
-        run: echo "Running tests"
+        run: exit 1
 
   deploy:
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy step
-        run: echo "Deploying application"
+        run: echo "Deploying after build and test"
+
+    
