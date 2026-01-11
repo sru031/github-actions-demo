@@ -13,9 +13,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Test ste
-        run: exit 1
-
+      - name: Test step
+        run: echo "Running tests"
+  
   deploy:
     needs: [build, test]
     runs-on: ubuntu-latest
